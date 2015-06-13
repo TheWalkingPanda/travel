@@ -1,0 +1,137 @@
+@CHARSET "UTF-8";
+
+/* 引入bootstrap的css文件
+-------------------------------------
+@IMPORT url("../bootstrap/css/bootstrap.css");*/
+
+body{
+	margin-top: 70px;
+	margin-bottom: 30px;
+	background-color: #70BAD5;
+	background-image: url("../image/sp.jpg");
+}
+
+.sp-userInfo{
+	height: 200px;
+	background-color: #fff;
+}
+.sp-headerTop{
+	height: 70px;
+	background-color: #0088CC;
+	margin-bottom: 10px;
+}
+.sp-header{
+	width: 80px;
+	height: 80px;
+	border: 3px solid; 
+	border-color: #fff;
+	margin-top: 40px;
+	margin-left: 18px;
+}
+.sp-userData{
+	height: 50px;
+	margin-top: 30px;
+}
+/* 左侧功能导航栏
+-------------------------------------------------- */
+.sp-sidenav {
+  width: 100%;
+  margin: 20px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.sp-sidenav > li > a {
+  display: block;
+  width: 190px \9;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.sp-sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.sp-sidenav > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.sp-sidenav > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.sp-sidenav .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.sp-sidenav > li > a:hover {
+  background-color: #f5f5f5;
+}
+.sp-sidenav a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.sp-sidenav .active .icon-chevron-right,
+.sp-sidenav .active a:hover .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
+}
+.sp-sidenav.affix {
+  top: 40px;
+}
+.sp-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+/*-------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sp-content{
+	height: 800px;
+	background-color: #fff;
+	padding: 20px;
+}
+.sp-content:hover{
+	background-color: #E2E2E2;
+}
+
+
+
+

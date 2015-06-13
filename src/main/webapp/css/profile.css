@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+/* 引入bootstrap的css文件
+-------------------------------------
+@IMPORT url("../bootstrap/css/bootstrap.css");*/
+
+body{
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.sp-profileHeader{
+	height: 300px;
+	width: 100%;
+	background-color: #0084B4;
+	background-image: url("../image/profileHeader.jpg");
+}
+.sp-header{
+	width: 200px;
+	height: 200px;
+	border: 5px solid; 
+	border-color: #fff;
+	margin-top: 150px;
+}
+.sp-headerCorner{
+	-webkit-border-radius: 10px;
+	   -moz-border-radius: 10px;
+			border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sp-content{
+	height: 800px;
+	padding: 20px;
+	background-color: #E2E2E2;
+}
+.sp-content:hover{
+	background-color: #999;
+}
+
+
+
+

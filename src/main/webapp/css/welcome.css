@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+body{
+	margin-top: 120px;
+	margin-bottom: 20px;
+	background-color: #61ACDA;
+	background-image: url("../image/sp.jpg");
+}
+
+.sp-welcome{
+	background-color: #fff;
+	padding: 20px;
+	height: 375px;
+}
+
+.sp-login{
+	background-color: #fff;
+	padding: 20px;
+	height: 95px;
+}
+
+.sp-reg{
+	background-color: #fff;
+	padding: 20px;
+	height: 220px;
+	margin-top: 20px;
+}
+
+
+
+
+

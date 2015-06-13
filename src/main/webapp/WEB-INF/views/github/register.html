@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Login</title>
+		<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<style type="text/css">
+			.middle{
+				height: 48px;
+				line-height: 48px;
+				overflow:hidden;
+			}
+			.row{
+				margin-bottom: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container" style="width: 800px;">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="welcome.html"><span style="font-size: 30px;font-weight: bold;">Travel</span></a>
+				</div>
+		      	<ul class="nav navbar-nav">
+			        <li><a href="#"><b>牛人游记</b></a></li>
+			        <li><a href="#"><b>新闻</b></a></li>
+			        <li><a href="#"><b>Blog</b></a></li>
+				</ul>
+		      	<div class="nav navbar-nav navbar-right middle">
+		      		<button onclick="toReg()" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 注 册</button>
+		      		<button onclick="toLogin()" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> 登 录</button>
+		      	</div>
+			</div>
+		</nav>
+		<div class="container" style="width: 800px;">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>加入Travel</h1>
+					<small style="color: #ADADAD;">只有见识到了大山大水，你才会有大山一样的胸怀，你才会知道其实自己有多么的幸福，不要让自己被现实困住！</small>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail" style="height: 70px;background-color: #FFFFFF;line-height:70px;">
+						&nbsp;&nbsp;<span class="glyphicon glyphicon-user" style="font-size: 25px;"></span>
+						<label>&nbsp;&nbsp;1、创建你的第一个账户</label>
+					</div>
+				</div>
+				<div class="col-md-1" style="height:70px; line-height:70px;">
+					<span class="glyphicon glyphicon-arrow-right" style="font-size: 20px;"></span>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail" style="height: 70px;background-color: #DBDBDB;line-height:70px;">
+						&nbsp;&nbsp;<span class="glyphicon glyphicon-envelope" style="font-size: 25px;"></span>
+						<label>&nbsp;&nbsp;2、激活你的账户</label>
+					</div>
+				</div>
+				<div class="col-md-1" style="height:70px; line-height:70px;">
+					<span class="glyphicon glyphicon-arrow-right" style="font-size: 20px;"></span>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail" style="height: 70px;background-color: #DBDBDB;line-height:70px;">
+						&nbsp;&nbsp;<span class="glyphicon glyphicon-home" style="font-size: 25px;"></span>
+						<label>&nbsp;&nbsp;3、进入你的主页</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<form>
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">用户名</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" />
+					    <p class="help-block">This will be your username — you can enter your organization's username next.</p>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword1">邮箱</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" />
+					    <p class="help-block">You will occasionally receive account related emails. We promise not to share your email with anyone.</p>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword1">密码</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" />
+					    <p class="help-block">Use at least one lowercase letter, one numeral, and seven characters.</p>
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword1">确认密码</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" />
+					  </div><br/><br/>
+					  <div>By clicking on "Create an account" below, you are agreeing to the Terms of Service and the Privacy Policy.</div><br/><br/>
+					  <button type="submit" class="btn btn-success pull-right" style="width: 200px;"><b>创建账户</b></button>
+					</form>
+				</div>
+				<div class="col-md-4">
+					<div style="height: 300px;border-radius: 5px;border: 1px solid #CCCCCC;">
+						<div style="height: 30px;text-align: center;font-size: 20px;line-height: 50px;">
+							<label>你会爱上Travel！</label>
+						</div>
+						<hr style="border: 1px solid #E7E7E7;"/>
+						<div style="padding: 10px;">
+							<label>Unlimited collaborators</label>
+							<label>Unlimited public repositories</label><br/><br/>
+							<label><span class="glyphicon glyphicon-ok" style="color: #60B044;"></span> Great communication</label>
+							<label><span class="glyphicon glyphicon-ok" style="color: #60B044;"></span> Friction-less development</label>
+							<label><span class="glyphicon glyphicon-ok" style="color: #60B044;"></span> Open source community</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<hr/>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+		</div>
+		
+	
+		<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../js/travel.js"></script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap 
+	PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" 
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap>
+	<typeAlias alias="User" type="com.travel.domain.User"/>
+	
+	<resultMap class="User" id="UserMap">
+		<result property="id" column="ID"/>
+		<result property="username" column="USERNAME"/>
+		<result property="password" column="PASSWORD"/>
+	</resultMap>
+	
+	<select id="getUserById" parameterClass="long" resultMap="UserMap">
+		SELECT ID, USERNAME, PASSWORD
+		FROM USER
+		WHERE ID=#id#
+	</select>
+	
+	<insert id="save" parameterClass="User">
+		INSERT INTO USER  (id,    username,   password) 
+					VALUES(#id#, #username#, #password#)
+		<selectKey resultClass="int" keyProperty="id">
+			SELECT @@IDENTITY
+			AS id
+		</selectKey>
+	</insert>
+	
+	
+</sqlMap>
