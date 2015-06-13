@@ -8,8 +8,8 @@
     <meta name="description" content="this is my page">
     <meta name="content-type" content="text/html; charset=UTF-8">
     
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../../css/profile.css">
+    <link rel="stylesheet" type="text/css" href="../../res/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../res/css/profile.css">
 	
   </head>
   
@@ -64,7 +64,7 @@
     	<div class="container">
     		<div class="row-fluid">
     			<div class="span3">
-    				<img alt="user-header" src="../../image/header.jpg" class="sp-header sp-headerCorner">
+    				<img alt="user-header" src="../../res/image/header.jpg" class="sp-header sp-headerCorner">
     			</div>
     			<div class="span9">
     				<div class="row-fluid">
@@ -115,8 +115,8 @@
 	
 	<!-- 引入jquery、bootstrap的js文件
 	===================================== -->
-	<script type="text/javascript" src="../../plugin/jquery/js/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="../../plugin/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../../res/plugin/jquery/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../../res/plugin/bootstrap/js/bootstrap.js"></script>
 	
   </body>
 </html>

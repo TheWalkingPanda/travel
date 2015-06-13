@@ -8,8 +8,8 @@
     <meta name="description" content="this is my page">
     <meta name="content-type" content="text/html; charset=UTF-8">
     
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../../css/reg.css">
+    <link rel="stylesheet" type="text/css" href="../../res/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../res/css/reg.css">
 
   </head>
   
@@ -138,9 +138,9 @@
     
     <!-- 引入jquery、bootstrap的js文件
 	===================================== -->
-	<script type="text/javascript" src="../../plugin/jquery/js/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="../../plugin/bootstrap/js/bootstrap.js"></script>
-	<script type="text/javascript" src="../../js/reg.js"></script>
+	<script type="text/javascript" src="../../res/plugin/jquery/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../../res/plugin/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../../res/js/reg.js"></script>
 	
   </body>
 </html>

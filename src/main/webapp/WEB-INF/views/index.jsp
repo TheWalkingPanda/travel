@@ -8,8 +8,8 @@
     <meta name="description" content="this is my page">
     <meta name="content-type" content="text/html; charset=UTF-8">
     
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../../res/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../res/css/index.css">
 	
   </head>
   
@@ -65,7 +65,7 @@
     		<div class="span3">
     			<div class="sp-userInfo sp-shadow sp-corner">
     				<div class="sp-headerTop sp-topCorner">
-    					<img alt="user-header" src="../../image/header.jpg" class="sp-header sp-corner">
+    					<img alt="user-header" src="../../res/image/header.jpg" class="sp-header sp-corner">
     				</div>
     				<a href="#"><b><span style="color: #000;margin-left: 110px;">大熊猫</span></b></a>
     				<div class="sp-userData">
@@ -113,8 +113,8 @@
 	
 	<!-- 引入jquery、bootstrap的js文件
 	===================================== -->
-	<script type="text/javascript" src="../../plugin/js/jquery/js/jquery-1.10.2.js"></script>
-	<script type="text/javascript" src="../../plugin/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../../res/plugin/js/jquery/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../../res/plugin/bootstrap/js/bootstrap.js"></script>
 	
   </body>
 </html>
