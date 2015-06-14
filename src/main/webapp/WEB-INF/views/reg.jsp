@@ -26,11 +26,11 @@
     					<a id="loginLink" class="dropdown-toggle" data-toggle="dropdown" href="#">
     						<small>已有账号?</small> 登录 <b class="caret"></b>
     					</a>
-   						<form action="loginStudentAction.action" method="post" id="loginForm" class="dropdown-menu" aria-labelledby="login" aria-hidden="true">
+   						<form action="login" method="post" id="loginForm" class="dropdown-menu" aria-labelledby="login" aria-hidden="true">
    							<label><small>邮箱地址</small></label>
-   							<input type="email" name="stu.stuEmail" required/>
+   							<input type="email" name="email" required/>
    							<label><small>密码</small></label>
-   							<input type="password" name="stu.stuPwd" required/>
+   							<input type="password" name=password required/>
    							
    							<div class="row-fluid">
    								<div class="span6">
@@ -63,7 +63,7 @@
 	    	<div class="span10">
 	    		<div class="sp-regPage sp-corner">
 	    			<div class="sp-login-error sp-topCorner">
-		    			<form action="regStudentAction.action" method="post" class="form-horizontal">
+		    			<form action="register" method="post" class="form-horizontal">
 		    				<fieldset>
 		    					<legend><h3>现在就加入 Super Panda。</h3></legend>
 		    					<div class="row-fluid">
@@ -72,7 +72,7 @@
 		    							<div class="row-fluid sp-formMargin">
 		    								<div class="span7">
 		    									<label><strong>您的姓名</strong></label>
-				    							<input type="text" name="stu.stuName" class="span12" required/>
+				    							<input type="text" name="username" class="span12" required/>
 		    								</div>
 		    								<div class="span5 sp-regHelp">
 		    									<small class="help-block">输入真实姓名，让同学们更容易找到你。</small>
@@ -81,7 +81,7 @@
 		    							<div class="row-fluid sp-formMargin">
 		    								<div class="span7">
 		    									<label><strong>邮箱地址</strong></label>
-				    							<input type="email" name="stu.stuEmail" class="span12" required/>
+				    							<input type="email" name="email" class="span12" required/>
 		    								</div>
 		    								<div class="span5 sp-regHelp">
 		    									<small class="help-block">你的邮件地址是什么?</small>
@@ -90,7 +90,7 @@
 		    							<div class="row-fluid sp-formMargin">
 		    								<div class="span7">
 		    									<label><strong>创建密码</strong></label>
-				    							<input type="password" name="stu.stuPwd" class="span12" required/>
+				    							<input type="password" name="password" class="span12" required/>
 		    								</div>
 		    								<div class="span5 sp-regHelp">
 		    									<small class="help-block">6个或更多字符! 要复杂些。</small>
@@ -99,10 +99,10 @@
 		    							<div class="row-fluid sp-formMargin">
 		    								<div class="span7">
 				    							<label class="radio inline">
-													<input type="radio" name="stu.stuSex" value="男" checked/> 男
+													<input type="radio" name="sex" value="男" checked/> 男
 												</label>
 												<label class="radio inline">
-													<input type="radio" name="stu.stuSex" value="女"/> 女
+													<input type="radio" name="sex" value="女"/> 女
 												</label>
 		    								</div>
 		    								<div class="span5"></div>

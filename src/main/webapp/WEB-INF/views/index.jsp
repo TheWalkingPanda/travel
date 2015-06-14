@@ -1,4 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.travel.domain.User"%>
+<%
+	User loginUser = (User)session.getAttribute("loginUser");
+%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,8 +27,10 @@
     			<a class="brand" href="#"><span class="sp-logo">Super Panda</span></a>
     			
 	    		<ul class="nav">
-	    			<li class="active"><a href="#"><i class="icon-home"></i> 首页</a></li>
-	    			<li><a href="#">BigPanda</a></li>
+	    			<li class="active"><a href="toPage?page=index"><i class="icon-home"></i> 首页</a></li>
+	    			<li><a href="#">新闻</a></li>
+	    			<li><a href="#">牛人游记</a></li>
+	    			<li><a href="#">Blog</a></li>
 	    			<li class="dropdown">
 	    				<a id="more" class="dropdown-toggle" data-toggle="dropdown" href="#">More<b class="caret"></b></a>
 	    				<ul class="dropdown-menu" aria-labelledby="more">
@@ -35,22 +41,21 @@
 			    			<li><a href="#">HaveMaoMao</a></li>
 	    				</ul>
 	    			</li>
-	    			
 	    		</ul>
 	    		
-	    		<form action="#" method="post" class="navbar-search offset3">
+	    		<form action="#" method="post" class="navbar-search">
 		    		<input type="text" class="search-query span2" placeholder="回车搜索"/>
     			</form>
     			
     			<ul class="nav pull-right">
     				<li class="dropdown">
 	    				<a id="account" class="dropdown-toggle" data-toggle="dropdown" href="#">
-	    					<i class="icon-user"></i> 大熊猫<b class="caret"></b>
+	    					<i class="icon-user"></i> <%=loginUser.getUsername() %><b class="caret"></b>
 	    				</a>
 	    				<ul class="dropdown-menu" aria-labelledby="account">
-	    					<li><a href="#"><i class="icon-cog"></i> 账户设置</a></li>
+	    					<li><a href="toPage?page=profile"><i class="icon-cog"></i> 账户设置</a></li>
 	    					<li class="divider"></li>
-	    					<li><a href="#"><i class="icon-off"></i> 注销</a></li>
+	    					<li><a href="logout"><i class="icon-off"></i> 注销</a></li>
 	    				</ul>
 	    			</li>
     			</ul>
@@ -67,7 +72,7 @@
     				<div class="sp-headerTop sp-topCorner">
     					<img alt="user-header" src="../../res/image/header.jpg" class="sp-header sp-corner">
     				</div>
-    				<a href="#"><b><span style="color: #000;margin-left: 110px;">大熊猫</span></b></a>
+    				<a href="toPage?page=profile"><b><span style="color: #000;margin-left: 110px;"><%=loginUser.getUsername() %></span></b></a>
     				<div class="sp-userData">
     					<div class="row-fluid" style="text-align: center;">
     						<div class="span4">
@@ -113,7 +118,7 @@
 	
 	<!-- 引入jquery、bootstrap的js文件
 	===================================== -->
-	<script type="text/javascript" src="../../res/plugin/js/jquery/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="../../res/plugin/jquery/js/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="../../res/plugin/bootstrap/js/bootstrap.js"></script>
 	
   </body>

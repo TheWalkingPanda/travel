@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BaseController {
 	
 	@RequestMapping("/toPage")
-	public String toHome(HttpServletRequest request){
-		return request.getParameter("toPage");
+	public String toPage(HttpServletRequest request){
+		return request.getParameter("page");
 	}
+	
 }

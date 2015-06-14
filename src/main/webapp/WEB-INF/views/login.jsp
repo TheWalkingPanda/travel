@@ -22,7 +22,7 @@
     		<div class="container">
     			<a class="brand" href="#"><span class="sp-logo">Super Panda</span></a>
     			<ul class="nav pull-right">
-    				<li><a href="#">登录 | 注册</a></li>
+    				<li><a href="toPage?page=reg">注册 >></a></li>
     			</ul>
     		</div>
     	</div>
@@ -34,17 +34,17 @@
 	    	<div class="span10">
 	    		<div class="alert alert-error">
 	    			<button type="button" class="close" data-dismiss="alert">&times;</button>
-	    			<strong>登录失败：</strong>错误的用户名与密码组合！
+	    			<strong>系统消息：</strong>登录异常，请重新登录！
 	    		</div>
 	    		<div class="sp-loginPage sp-topCorner">
-	    			<form action="loginStudentAction.action" method="post" class="form-horizontal">
+	    			<form action="login" method="post" class="form-horizontal">
 	    				<fieldset>
 	    					<legend><h3>登录 Super Panda</h3></legend>
 	    					<div class="row-fluid">
 	    						<div class="span2"></div>
 	    						<div class="span8">
-	    							<input type="email"  name="stu.stuEmail" class="input-xlarge" placeholder="邮箱地址" required/><br/><br/>
-	    							<input type="password" name="stu.stuPwd" class="input-xlarge"  placeholder="密码" required/><br/><br/><br/>
+	    							<input type="email"  name="email" class="input-xlarge" placeholder="邮箱地址" required/><br/><br/>
+	    							<input type="password" name="password" class="input-xlarge"  placeholder="密码" required/><br/><br/><br/>
 	    							
 	    							<div class="row-fluid">
 	    								<div class="span2">
@@ -70,7 +70,7 @@
 	    			<div class="row-fluid">
 	    				<div class="span2"></div>
 		    			<div class="span8">
-		    				<small>新来Super Panda? &nbsp;<a href="reg.html">现在注册 >></a></small>
+		    				<small>新来Super Panda? &nbsp;<a href="toPage?page=reg">现在注册 >></a></small>
 		    			</div>
 		    			<div class="span2"></div>
 	    			</div>

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%
-		request.getRequestDispatcher("/toPage?toPage=reg").forward(request, response);
+		request.getRequestDispatcher("/toPage?page=welcome").forward(request, response);
 	%>
 </body>
 </html>

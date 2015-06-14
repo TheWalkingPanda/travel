@@ -1,4 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.travel.domain.User"%>
+<%
+	User loginUser = (User)session.getAttribute("loginUser");
+%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,8 +27,10 @@
     			<a class="brand" href="#"><span class="sp-logo">Super Panda</span></a>
     			
 	    		<ul class="nav">
-	    			<li class="active"><a href="#"><i class="icon-home"></i> 首页</a></li>
-	    			<li><a href="#">BigPanda</a></li>
+	    			<li class="active"><a href="toPage?page=index"><i class="icon-home"></i> 首页</a></li>
+	    			<li><a href="#">新闻</a></li>
+	    			<li><a href="#">牛人游记</a></li>
+	    			<li><a href="#">Blog</a></li>
 	    			<li class="dropdown">
 	    				<a id="more" class="dropdown-toggle" data-toggle="dropdown" href="#">More<b class="caret"></b></a>
 	    				<ul class="dropdown-menu" aria-labelledby="more">
@@ -38,19 +44,19 @@
 	    			
 	    		</ul>
 	    		
-	    		<form action="#" method="post" class="navbar-search offset3">
+	    		<form action="#" method="post" class="navbar-search">
 		    		<input type="text" class="search-query span2" placeholder="回车搜索"/>
     			</form>
     			
     			<ul class="nav pull-right">
     				<li class="dropdown">
 	    				<a id="account" class="dropdown-toggle" data-toggle="dropdown" href="#">
-	    					<i class="icon-user"></i> 大熊猫<b class="caret"></b>
+	    					<i class="icon-user"></i> <%=loginUser.getUsername() %><b class="caret"></b>
 	    				</a>
 	    				<ul class="dropdown-menu" aria-labelledby="account">
-	    					<li><a href="#"><i class="icon-cog"></i> 账户设置</a></li>
+	    					<li><a href="toPage?page=profile"><i class="icon-cog"></i> 账户设置</a></li>
 	    					<li class="divider"></li>
-	    					<li><a href="#"><i class="icon-off"></i> 注销</a></li>
+	    					<li><a href="logout"><i class="icon-off"></i> 注销</a></li>
 	    				</ul>
 	    			</li>
     			</ul>
@@ -68,10 +74,10 @@
     			</div>
     			<div class="span9">
     				<div class="row-fluid">
-    					<div class="span2">
-    						<h2 style="color: #fff; margin-top: 250px;">大熊猫</h2>
+    					<div class="span6">
+    						<h2 style="color: #fff; margin-top: 250px;"><%=loginUser.getUsername() %></h2>
     					</div>
-    					<div class="span10">
+    					<div class="span6">
     						<a href="#" class="btn btn-warning pull-right" style="margin-top: 40px;">
     							<i class="icon-plus icon-white"></i> <strong>添加一张封面</strong>
     						</a>

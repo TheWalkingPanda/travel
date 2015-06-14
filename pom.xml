@@ -10,7 +10,7 @@
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <spring.version>3.0.5.RELEASE</spring.version>
+    <spring.version>3.1.4.RELEASE</spring.version>
     <aspectj.version>1.6.9</aspectj.version>
   </properties>
   
@@ -79,7 +79,7 @@
     <dependency>
 		<groupId>mysql</groupId>
 		<artifactId>mysql-connector-java</artifactId>
-		<version>5.1.21</version>
+		<version>5.1.35</version>
 	</dependency>
     
     <dependency>

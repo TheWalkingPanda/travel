@@ -1,5 +1,7 @@
 package com.travel.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,10 @@ public class UserSVImpl implements IUserSV {
 	
 	public long save(User user) {
 		return userDao.save(user);
+	}
+
+	public List<User> getUserByCondition(User user) {
+		return userDao.getUserByCondition(user);
 	}
 
 }

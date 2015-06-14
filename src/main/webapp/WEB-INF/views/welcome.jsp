@@ -22,7 +22,7 @@
     		<div class="container">
     			<a class="brand" href="#"><span class="sp-logo">Super Panda</span></a>
     			<ul class="nav pull-right">
-    				<li><a href="#">登录 | 注册</a></li>
+    				<li><a href="toPage?page=reg">注册 >></a></li>
     			</ul>
     		</div>
     	</div>
@@ -40,11 +40,11 @@
 	    			</div>
 	    			<div class="span5">
 	    				<div class="sp-login sp-corner sp-shadow">
-	    					<form action="loginStudentAction.action" method="post">
+	    					<form action="login" method="post">
 		    					<div class="row-fluid">
 	    							<div class="input-prepend">
 				   						<span class="add-on"><i class="icon-envelope"></i></span>
-				   						<input type="email"  name="stu.stuEmail" style="width: 234px" placeholder="邮箱地址" required/>
+				   						<input type="email"  name="email" style="width: 234px" placeholder="邮箱地址" required/>
 				   					</div>
 		    					</div>
 		    					
@@ -52,7 +52,7 @@
 		    						<div class="span9">
 		    							<div class="input-prepend">
 					   						<span class="add-on"><i class="icon-lock"></i></span>
-					   						<input type="password" name="stu.stuPwd" style="width: 165px" class="span10" placeholder="密码" required/>
+					   						<input type="password" name="password" style="width: 165px" class="span10" placeholder="密码" required/>
 					   					</div>
 		    						</div>
 		    						<div class="span3">
@@ -80,34 +80,34 @@
 	    						</div>
 	    					</div>
 	    					
-	    					<form action="regStudentAction.action" method="post">
+	    					<form action="register" method="post">
 	    						<div class="row-fluid">
 	    							<div class="input-prepend">
 				   						<span class="add-on"><i class="icon-user"></i></span>
-				   						<input type="text" name="stu.stuName" style="width: 234px" placeholder="输入真实姓名，让同学们更容易找到你。" required/>
+				   						<input type="text" name="username" style="width: 234px" placeholder="输入真实姓名，让同学们更容易找到你。" required/>
 				   					</div>
 		    					</div>
 		    					
 		    					<div class="row-fluid">
 	    							<div class="input-prepend">
 				   						<span class="add-on"><i class="icon-envelope"></i></span>
-				   						<input type="email" name="stu.stuEmail" style="width: 234px" placeholder="你的邮件地址是什么?" required/>
+				   						<input type="email" name="email" style="width: 234px" placeholder="你的邮件地址是什么?" required/>
 				   					</div>
 		    					</div>
 		    					
 		    					<div class="row-fluid">
 	    							<div class="input-prepend">
 				   						<span class="add-on"><i class="icon-lock"></i></span>
-				   						<input type="password" name="stu.stuPwd" style="width: 234px" placeholder="6个或更多字符! 要复杂些。" required/>
+				   						<input type="password" name="password" style="width: 234px" placeholder="6个或更多字符! 要复杂些。" required/>
 				   					</div>
 		    					</div>
 		    					
 		    					<div class="row-fluid">
 	    							<label class="radio inline">
-										<input type="radio" name="stu.stuSex" value="男" checked/> 男
+										<input type="radio" name="sex" value="男" checked/> 男
 									</label>
 									<label class="radio inline">
-										<input type="radio" name="stu.stuSex" value="女"/> 女
+										<input type="radio" name="sex" value="女"/> 女
 									</label>
 		    					</div><br/>
 	    						

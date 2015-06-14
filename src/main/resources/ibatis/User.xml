@@ -9,17 +9,35 @@
 		<result property="id" column="ID"/>
 		<result property="username" column="USERNAME"/>
 		<result property="password" column="PASSWORD"/>
+		<result property="email" 	column="EMAIL"/>
+		<result property="sex" 		column="SEX"/>
 	</resultMap>
 	
-	<select id="getUserById" parameterClass="long" resultMap="UserMap">
-		SELECT ID, USERNAME, PASSWORD
+	<select id="getUserByCondition" parameterClass="User" resultMap="UserMap">
+		SELECT ID, USERNAME, PASSWORD, EMAIL, SEX
 		FROM USER
-		WHERE ID=#id#
+		<dynamic prepend="WHERE">
+			<isNotEqual prepend="AND" property="id" compareValue="0">
+				ID=#id#
+			</isNotEqual>
+			<isNotNull prepend="AND" property="username">
+				USERNAME=#username#
+			</isNotNull>
+			<isNotNull prepend="AND" property="password">
+				PASSWORD=#password#
+			</isNotNull>
+			<isNotNull prepend="AND" property="email">
+				EMAIL=#email#
+			</isNotNull>
+			<isNotNull prepend="AND" property="sex">
+				SEX=#sex#
+			</isNotNull>
+		</dynamic>
 	</select>
 	
 	<insert id="save" parameterClass="User">
-		INSERT INTO USER  (id,    username,   password) 
-					VALUES(#id#, #username#, #password#)
+		INSERT INTO USER  (ID,    USERNAME,   PASSWORD,  EMAIL,	  SEX) 
+					VALUES(#id#, #username#, #password#, #email#, #sex#)
 		<selectKey resultClass="int" keyProperty="id">
 			SELECT @@IDENTITY
 			AS id
