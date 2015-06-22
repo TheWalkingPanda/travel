@@ -19,7 +19,6 @@ import com.travel.service.interfaces.IArticleSV;
 public class ArticleJob extends QuartzJobBean {
 	private static Log log = LogFactory.getLog(ArticleJob.class);
 	
-
 	protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
 		try {
 			SchedulerContext schedulerContext = context.getScheduler().getContext();
