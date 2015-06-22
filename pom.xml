@@ -133,6 +133,18 @@
 	    <groupId>com.qiniu</groupId>
 	    <artifactId>qiniu-java-sdk</artifactId>
 	    <version>[6.1.7, 6.999]</version>
+	    <exclusions>
+			<exclusion>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpcore</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.quartz-scheduler</groupId>
+	    <artifactId>quartz</artifactId>
+	    <version>1.8.6</version>
 	</dependency>
     
   </dependencies>
