@@ -12,6 +12,16 @@
 							
 	<import resource="dataSource.xml"/>
 	<import resource="quartz.xml"/>
+	<import resource="memcached.xml"/>
+	
+	<bean id="propertyPlaceholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:properties/jdbc.properties</value>
+				<value>classpath:properties/memcached.properties</value>
+			</list>
+		</property>
+	</bean>
 	
 	<context:annotation-config />
 	<context:component-scan base-package="com.travel" />
