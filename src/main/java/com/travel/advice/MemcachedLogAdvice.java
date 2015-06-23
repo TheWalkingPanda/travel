@@ -14,7 +14,6 @@ import com.travel.util.TravelStaticValue;
 public class MemcachedLogAdvice {
 	private static Log log = LogFactory.getLog(MemcachedLogAdvice.class);
 	
-	
 	@Around("execution(* com.danga.MemCached.MemCachedClient.*(..))")
 	public void memcachedLog(ProceedingJoinPoint pjp) throws Throwable{
 		String methodName = pjp.getSignature().getName();
