@@ -1,19 +1,39 @@
 package com.travel.cache;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
+import java.util.List;
 
 import com.danga.MemCached.MemCachedClient;
+import com.travel.service.interfaces.IArticleSV;
 
 public class ArticleCache {
-	public static void test(){
-		ApplicationContext ac = new FileSystemXmlApplicationContext("src/main/resources/spring/applicationContext.xml");
-		MemCachedClient memClient = ac.getBean(MemCachedClient.class);
-		memClient.set("test", "forTest");
-		System.out.println(111);
-	}
 	
-	public static void main(String[] args) {
-		test();
+	private IArticleSV articleSV;
+	
+	private MemCachedClient memClient;
+	
+	public void cacheArticleURL(){
+		List<String> allArticleURL = articleSV.getAllArticleURL();
+		memClient.set("allArticleURL", allArticleURL);
+	}
+
+	
+	
+	
+	
+	
+	public IArticleSV getArticleSV() {
+		return articleSV;
+	}
+
+	public void setArticleSV(IArticleSV articleSV) {
+		this.articleSV = articleSV;
+	}
+
+	public MemCachedClient getMemClient() {
+		return memClient;
+	}
+
+	public void setMemClient(MemCachedClient memClient) {
+		this.memClient = memClient;
 	}
 }

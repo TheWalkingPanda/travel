@@ -1,5 +1,7 @@
 package com.travel.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,10 @@ public class ArticleSVImpl implements IArticleSV {
 	
 	public long saveArticle(Article article) {
 		return articleDao.saveArticle(article);
+	}
+
+	public List<String> getAllArticleURL() {
+		return articleDao.getAllArticleURL();
 	}
 
 }

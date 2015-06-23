@@ -1,7 +1,6 @@
 package com.travel.pre.spider.processor;
 
 import java.util.List;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -10,6 +9,7 @@ import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.processor.PageProcessor;
 import us.codecraft.webmagic.selector.Html;
 
+import com.danga.MemCached.MemCachedClient;
 import com.travel.util.HtmlUtil;
 
 public class BikeToPageProcessor implements PageProcessor {
@@ -17,7 +17,13 @@ public class BikeToPageProcessor implements PageProcessor {
 	
 	private Site site = Site.me().setRetryTimes(3).setSleepTime(1000);
 	
+	private MemCachedClient memClient;
+	
 	private boolean tag = true;
+	
+	public BikeToPageProcessor(MemCachedClient memClient){
+		this.memClient = memClient;
+	}
 	
 	/**
 	 * 获取所有文章列表页面的URL，并加入爬虫列表
@@ -54,17 +60,27 @@ public class BikeToPageProcessor implements PageProcessor {
 		page.putField("articleTime", HtmlUtil.getText(html.$("div.article-time")));
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void process(Page page) {
-		if(tag){
-			getArticleListLinks(page);
-			tag = false;
-		}
-		
-		String requestURL = getCurrentURL(page);
-		if(requestURL.startsWith("http://www.biketo.com/tour/index_")){
-			getArticleLinks(page);
-		}else if(requestURL.startsWith("http://www.biketo.com/tour/notes/")){
-			getArticle(page);
+		List<String> allArticleURL = (List<String>) memClient.get("allArticleURL");
+		if(allArticleURL!=null){
+			if(allArticleURL.contains(getCurrentURL(page))){
+				page.setSkip(true);
+			}else{
+				if(tag){
+					getArticleListLinks(page);
+					tag = false;
+				}
+				
+				String requestURL = getCurrentURL(page);
+				if(requestURL.startsWith("http://www.biketo.com/tour/index_")){
+					getArticleLinks(page);
+				}else if(requestURL.startsWith("http://www.biketo.com/tour/notes/")){
+					getArticle(page);
+					allArticleURL.add(requestURL);
+					memClient.set("allArticleURL", allArticleURL);
+				}
+			}
 		}
 	}
 

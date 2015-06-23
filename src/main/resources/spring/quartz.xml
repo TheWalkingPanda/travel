@@ -15,7 +15,8 @@
 		
 		<property name="schedulerContextAsMap">      
             <map>      
-                <entry key="articleSV" value-ref="articleSV"/>      
+                <entry key="articleSV" value-ref="articleSV"/>  
+                <entry key="memClient" value-ref="memcachedClient" />  
             </map>      
         </property> 
 	</bean>
@@ -23,10 +24,10 @@
 	<bean id="trigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
 		<property name="jobDetail" ref="jobDetail" />
 		<!-- 每 30 执行一次 -->
-		<!-- <property name="cronExpression" value="0/30 * * * * ?" /> -->
+		<property name="cronExpression" value="0/30 * * * * ?" />
 		
 		<!-- 每 5分钟 执行一次 -->
-		<property name="cronExpression" value="0 0/5 * * * ?" />
+		<!-- <property name="cronExpression" value="0 0/5 * * * ?" /> -->
 	</bean>
 	
 	<bean id="jobDetail" class="org.springframework.scheduling.quartz.JobDetailBean">

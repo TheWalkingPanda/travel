@@ -19,4 +19,8 @@
 		<constructor-arg value="neeaMemcachedPool" />
 	</bean>
 	
+	<bean id="articleCache" class="com.travel.cache.ArticleCache" init-method="cacheArticleURL">
+		<property name="articleSV" ref="articleSV" />
+		<property name="memClient" ref="memcachedClient" />
+	</bean>
 </beans>

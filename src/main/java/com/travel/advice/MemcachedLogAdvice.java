@@ -15,7 +15,7 @@ public class MemcachedLogAdvice {
 	private static Log log = LogFactory.getLog(MemcachedLogAdvice.class);
 	
 	@Around("execution(* com.danga.MemCached.MemCachedClient.*(..))")
-	public void memcachedLog(ProceedingJoinPoint pjp) throws Throwable{
+	public Object memcachedLog(ProceedingJoinPoint pjp) throws Throwable{
 		String methodName = pjp.getSignature().getName();
 		Object[] args = pjp.getArgs();
 		String logArgs = "";
@@ -28,5 +28,6 @@ public class MemcachedLogAdvice {
 		log.info(TravelStaticValue.LOG_PREFIX + "Memcached >>> method:["+methodName+"] -- "
 															   +"args:["+logArgs+"] -- "
 															 +"return:["+ret+"]");
+		return ret;
 	}
 }

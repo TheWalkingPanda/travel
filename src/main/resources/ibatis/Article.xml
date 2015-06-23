@@ -26,4 +26,10 @@
 		</selectKey>
 	</insert>
 	
+	<select id="getAllArticleURL" resultClass="string">
+		SELECT URL
+		FROM ARTICLE
+		WHERE STATE='U'
+	</select>
+	
 </sqlMap>
